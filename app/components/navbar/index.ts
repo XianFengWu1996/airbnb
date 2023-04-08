@@ -1,3 +1,5 @@
+'use client';
+
 import Logo from './Logo';
 import MenuItem from './MenuItem';
 import Navbar from './Navbar';
