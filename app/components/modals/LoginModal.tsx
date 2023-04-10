@@ -5,10 +5,10 @@ import { useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import { signIn } from 'next-auth/react';
-import Modal from './Modal';
-import Heading from '../Heading';
 import Input from '../inputs/Input';
-import Button from '../Button';
+
+import { Button, Heading } from '../index';
+import { Modal } from '.';
 import { FcGoogle } from 'react-icons/fc';
 import { AiFillGithub } from 'react-icons/ai';
 import useLoginModal from '@/app/hooks/useLoginModal';
