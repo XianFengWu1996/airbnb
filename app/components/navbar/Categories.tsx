@@ -47,11 +47,6 @@ export const categories = [
     description: 'This property has a pool!',
   },
   {
-    label: 'Modern',
-    icon: MdOutlineVilla,
-    description: 'This property is close to the villa!',
-  },
-  {
     label: 'Islands',
     icon: GiIsland,
     description: 'This property is on an island!',
