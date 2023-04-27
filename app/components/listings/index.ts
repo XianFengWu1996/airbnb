@@ -1,3 +1,5 @@
+'use client';
+
 import ListingCard from './ListingCard';
 import ListingHead from './ListingHead';
 import ListingInfo from './ListingInfo';

@@ -1,3 +1,4 @@
+'use client';
 import Avatar from './Avatar';
 import Button from './Button';
 import ClientOnly from './ClientOnly';
