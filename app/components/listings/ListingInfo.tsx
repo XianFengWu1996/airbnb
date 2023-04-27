@@ -23,7 +23,7 @@ interface ListingInfoProps {
   locationValue: string;
 }
 
-const Map = dynamic(() => import('../Map'));
+const Map = dynamic(() => import('../Map'), { ssr: false });
 
 const ListingInfo: React.FC<ListingInfoProps> = ({
   user,

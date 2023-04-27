@@ -1,3 +1,5 @@
+'use client';
+
 import { Container, Heading } from '../components';
 import { ListingCard } from '../components/listings';
 import { SafeListing, SafeUser } from '../types';
