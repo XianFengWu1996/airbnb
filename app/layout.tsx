@@ -4,7 +4,12 @@ import Navbar from './components/navbar/Navbar';
 import './globals.css';
 import ToasterProvider from './components/providers/ToasterProvider';
 import getCurrentUser from './actions/getCurrentUser';
-import { LoginModal, RegisterModal, RentModal } from './components/modals';
+import {
+  LoginModal,
+  RegisterModal,
+  RentModal,
+  SearchModal,
+} from './components/modals';
 import { ClientOnly } from './components';
 
 export const metadata = {
@@ -27,6 +32,7 @@ export default async function RootLayout({
       <body className={nunito.className}>
         <ClientOnly>
           <ToasterProvider />
+          <SearchModal />
           <LoginModal />
           <RegisterModal />
           <RentModal />
