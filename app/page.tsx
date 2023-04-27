@@ -11,6 +11,10 @@ const Home = async ({ searchParams }: HomeProps) => {
   const listing = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
+  if (typeof window === 'undefined') {
+    return;
+  }
+
   if (listing.length === 0) {
     return (
       <ClientOnly>
