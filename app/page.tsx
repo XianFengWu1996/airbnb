@@ -12,7 +12,11 @@ const Home = async ({ searchParams }: HomeProps) => {
   const currentUser = await getCurrentUser();
 
   if (typeof window === 'undefined') {
-    return;
+    return (
+      <ClientOnly>
+        <EmptyState showReset />
+      </ClientOnly>
+    );
   }
 
   if (listing.length === 0) {

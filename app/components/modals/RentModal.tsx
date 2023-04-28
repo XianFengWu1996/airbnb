@@ -8,7 +8,6 @@ import { categories } from '../navbar/Categories';
 import CategoryInput from '../inputs/CategoryInput';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import CountrySelect from '../inputs/CountrySelect';
-import dynamic from 'next/dynamic';
 import Counter from '../inputs/Counter';
 import ImageUpload from '../inputs/ImageUpload';
 import Input from '../inputs/Input';
@@ -58,14 +57,6 @@ const RentModal = () => {
   const roomCount = watch('roomCount');
   const bathroomCount = watch('bathroomCount');
   const imageSrc = watch('imageSrc');
-
-  const Map = useMemo(
-    () =>
-      dynamic(() => import('../Map'), {
-        ssr: false,
-      }),
-    [location]
-  );
 
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
@@ -155,7 +146,6 @@ const RentModal = () => {
           value={location}
           onChange={(value) => setCustomValue('location', value)}
         />
-        <Map center={location?.latlng} />
       </div>
     );
   }

@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
 import { useCallback, useMemo, useState } from 'react';
 import { Range } from 'react-date-range';
-import dynamic from 'next/dynamic';
 import CountrySelect, { CountrySelectValue } from '../inputs/CountrySelect';
 import qs from 'query-string';
 import { formatISO } from 'date-fns';
@@ -36,13 +35,13 @@ const SearchModal = () => {
     key: 'selection',
   });
 
-  const Map = useMemo(
-    () =>
-      dynamic(() => import('../Map'), {
-        ssr: false,
-      }),
-    [location]
-  );
+  // const Map = useMemo(
+  //   () =>
+  //     dynamic(() => import('../Map'), {
+  //       ssr: false,
+  //     }),
+  //   [location]
+  // );
 
   const onBack = useCallback(() => {
     setStep((value) => value - 1);
@@ -132,8 +131,6 @@ const SearchModal = () => {
       />
 
       <hr />
-
-      <Map center={location?.latlng} />
     </div>
   );
 
